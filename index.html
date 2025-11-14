@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrelloS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+    </header>
+
+    <main class="board-container">
+        <!-- Switch Boards Modal -->
+        <div id="board-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Switch Boards</h2>
+                <ul id="board-list"></ul>
+                <button id="create-board-btn">Create New Board</button>
+                <button id="close-board-modal">Close</button>
+            </div>
+        </div>
+
+        <!-- Add Board Modal -->
+        <div id="add-board-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Create New Board</h2>
+                <input type="text" id="board-name-input" class="modal-input" placeholder="Board name">
+                <div class="modal-buttons">
+                    <button id="cancel-board-btn">Cancel</button>
+                    <button id="save-board-btn">Create</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add List Modal -->
+        <div id="add-list-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Add List</h2>
+                <input type="text" id="list-name-input" class="modal-input" placeholder="List name">
+                <div class="modal-buttons">
+                    <button id="cancel-list-btn">Cancel</button>
+                    <button id="save-list-btn">Add List</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Add Card Modal -->
+        <div id="add-card-modal" class="modal hidden">
+            <div class="modal-content wide">
+                <h2>Add Card</h2>
+                <input type="text" id="card-title-input" class="modal-input" placeholder="Card title">
+                <textarea id="card-desc-input" class="modal-input modal-textarea" placeholder="Description"></textarea>
+                <input type="url" id="card-image-input" class="modal-input" placeholder="Image URL (optional)">
+                <div class="modal-buttons">
+                    <button id="cancel-card-btn">Cancel</button>
+                    <button id="save-card-btn">Add Card</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Labels Modal -->
+        <div id="labels-modal" class="modal hidden">
+            <div class="modal-content wide">
+                <h2>Manage Labels</h2>
+                <div id="labels-list"></div>
+                <div class="modal-buttons">
+                    <button id="save-labels-btn">Save</button>
+                    <button id="cancel-labels-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Delete Confirmation Modal -->
+        <div id="delete-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>Confirm Delete</h2>
+                <p id="delete-message"></p>
+                <div class="modal-buttons">
+                    <button id="cancel-delete-btn">Cancel</button>
+                    <button id="confirm-delete-btn" class="danger">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="board-header">
+            <h1 id="board-title">My Trello Board</h1>
+            <div class="board-actions">
+                <button id="switch-boards-btn" class="icon-btn" title="Switch boards">Switch Boards</button>
+            </div>
+        </div>
+
+        <div class="lists-container" id="lists-container">
+
+
+
+            <!-- Lists add -->
+        </div>
+
+        <button class="add-list-btn" id="add-list-main-btn">+ Add another list</button>
+<!-- Footer -->
+        <div class="board-footer">
+            <button class="footer-btn active">📋 Board</button>
+            <button class="footer-btn" id="footer-switch-btn">🔀 Switch boards</button>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
